@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>Lista de personas</h3>
+    <button class="btn btn-success" [routerLink]="['crear/']">crear</button>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Fecha de nacimiento</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let persona of data">
+                <th scope="row">{{ persona.id }}</th>
+                <td>{{ persona.nombre }}</td>
+                <td>{{ persona.apellido }}</td>
+                <td>{{ persona.fecha_nacimiento|date:'yyyy-MM-dd'}}</td>
+                <td><button class="btn btn-danger" [routerLink]="['']"
+                        (click)="deletePersona(persona.id)">deleter</button></td>
+                <td><button class="btn btn-primary" [routerLink]="['editar/',persona.id]">update</button></td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

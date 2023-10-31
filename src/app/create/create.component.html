@@ -1,0 +1,15 @@
+<div class="container">
+    <div></div>
+    <div *ngIf="persona">
+        <div><input type="text" name="nombre" [(ngModel)]="persona.nombre" class="form-control" placeholder="Nombre"
+                autofocus>
+        </div>
+        <div><input type="text" name="nombre" [(ngModel)]="persona.apellido" class="form-control" placeholder="Apellido"
+                autofocus>
+        </div>
+        <div><input type="text" name="nombre" [(ngModel)]="persona.fecha_nacimiento" class="form-control"
+                placeholder="Fecha_nacimiento" autofocus>
+        </div>
+        <button class="btn btn-success" (click)="creaPersona()">Crear</button>
+    </div>
+</div>
