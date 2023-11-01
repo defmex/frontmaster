@@ -16,24 +16,13 @@ export class PersonasComponent {
 
   ngOnInit(): void {
     this.getPersonas();
-    this.personaService.getPersona('2').subscribe(persona => {
-      //this.data1 = persona;
-      console.log('Nombre de la persona con id=2: ', persona);
-    })
   }
 
   getPersonas() {
     this.personaService.getPersonas().subscribe(personas => {
       this.data = personas;
-      console.log(this.data);
     })
   }
-  /*updatePersona(id: number, persona: Persona) {
-    this.personaService.putPersona(id, persona).subscribe(() => {
-      this.router.navigate(['/editar/' + id])
-    })
-  }*/
-
 
   deletePersona(id: string | undefined) {
     this.personaService.deletePersona(id).subscribe(() => {
