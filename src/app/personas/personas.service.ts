@@ -10,19 +10,19 @@ export class PersonasService {
   constructor(private http: HttpClient) { }
 
   getPersonas(): Observable<Persona[]> {
-    return this.http.get<Persona[]>('http://localhost:3051/personas');
+    return this.http.get<Persona[]>('https://backmaster-kfr5pgavlq-uc.a.run.app/personas');
   }
   getPersona(id: string): Observable<Persona> {
-    return this.http.get<Persona>('http://localhost:3051/personas/' + id);
+    return this.http.get<Persona>('https://backmaster-kfr5pgavlq-uc.a.run.app/personas/' + id);
   }
   putPersona(id: string | undefined, persona: Persona): Observable<Persona> {
-    return this.http.put<Persona>('http://localhost:3051/personas/' + id, persona);
+    return this.http.put<Persona>('https://backmaster-kfr5pgavlq-uc.a.run.app/personas/' + id, persona);
   }
   createPersona(persona: Persona): Observable<any> {
-    return this.http.post<any>('http://localhost:3051/personas', persona);
+    return this.http.post<any>('https://backmaster-kfr5pgavlq-uc.a.run.app/personas', persona);
   }
   deletePersona(id: string | undefined): Observable<Persona> {
-    return this.http.delete<Persona>('http://localhost:3051/personas/' + id);
+    return this.http.delete<Persona>('https://backmaster-kfr5pgavlq-uc.a.run.app/personas/' + id);
   }
 
 }
