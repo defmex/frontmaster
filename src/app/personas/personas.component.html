@@ -18,7 +18,7 @@
                 <th scope="row">{{ persona.id }}</th>
                 <td>{{ persona.nombre }}</td>
                 <td>{{ persona.apellido }}</td>
-                <td>{{ persona.fecha_nacimiento|date:'YYYY-MM-DD': 'UTC'}}</td>
+                <td>{{ persona.fecha_nacimiento|date:'dd-MM-YYYY': 'UTC'}}</td>
                 <td><button class="btn btn-danger" [routerLink]="['']"
                         (click)="deletePersona(persona.id)">Eliminar</button></td>
                 <td><button class="btn btn-primary" [routerLink]="['editar/',persona.id]">Actualizar</button></td>
