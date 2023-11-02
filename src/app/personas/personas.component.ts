@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./personas.component.css']
 })
 export class PersonasComponent {
-  //@Input() persona: Persona;
   data: Persona[] = [];
 
   constructor(private personaService: PersonasService, private router: Router) { }
@@ -27,16 +26,8 @@ export class PersonasComponent {
   deletePersona(id: string | undefined) {
     this.personaService.deletePersona(id).subscribe(() => {
       console.log('listo');
+      window.location.reload();
     });
   }
-
-
 }
 
-/*
-  personas: Observable<Persona>;
-  constructor(private personaService: PersonasService) { }
-  ngOnInit() {
-    this.personas = this.personaService.getPersonas();
-  }
-  */

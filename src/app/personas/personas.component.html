@@ -20,8 +20,8 @@
                 <td>{{ persona.apellido }}</td>
                 <td>{{ persona.fecha_nacimiento|date:'yyyy-MM-dd'}}</td>
                 <td><button class="btn btn-danger" [routerLink]="['']"
-                        (click)="deletePersona(persona.id)">deleter</button></td>
-                <td><button class="btn btn-primary" [routerLink]="['editar/',persona.id]">update</button></td>
+                        (click)="deletePersona(persona.id)">Eliminar</button></td>
+                <td><button class="btn btn-primary" [routerLink]="['editar/',persona.id]">Actualizar</button></td>
 
             </tr>
         </tbody>
