@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>Lista de personas</h3>
+    <h1>Lista de personas</h1>
     <button class="btn btn-success" [routerLink]="['crear/']">crear</button>
     <table class="table table-hover">
         <thead>
@@ -18,7 +18,7 @@
                 <th scope="row">{{ persona.id }}</th>
                 <td>{{ persona.nombre }}</td>
                 <td>{{ persona.apellido }}</td>
-                <td>{{ persona.fecha_nacimiento|date:'yyyy-MM-dd'}}</td>
+                <td>{{ persona.fecha_nacimiento|date:'YYYY-MM-DD': 'UTC'}}</td>
                 <td><button class="btn btn-danger" [routerLink]="['']"
                         (click)="deletePersona(persona.id)">Eliminar</button></td>
                 <td><button class="btn btn-primary" [routerLink]="['editar/',persona.id]">Actualizar</button></td>
